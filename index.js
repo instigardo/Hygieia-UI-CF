@@ -127,6 +127,7 @@ gulp.task('serve', ['build'], function() {
     }
 
     browserSync.init({
+		port: process.env.PORT || 3000,
         server: {
             baseDir: hygieia.dist,
             startPath: '/',
@@ -287,5 +288,5 @@ gulp.task('chartist', function() {
 });
 
 gulp.start('serve', function() {
-	console.log('Welcome to CF Hygieia \n \n Author: Himanshu Saxena');	
+	console.log('Serving you now mother fucker');	
 });
